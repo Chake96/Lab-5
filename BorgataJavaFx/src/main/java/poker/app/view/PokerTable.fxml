@@ -31,7 +31,7 @@
                               <TextField fx:id="txtP1Name" prefHeight="11.0" prefWidth="94.0" style="-fx-background-color: lightgreen;" />
                               <HBox fx:id="hBoxP1Cards" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
                               <ToggleButton fx:id="btnP1SitLeave" mnemonicParsing="false" onAction="#handleP1SitLeave" styleClass="togglebutton" text="Sit" GridPane.rowIndex="1" />
-                              <Label fx:id="lblP1Name" prefHeight="33.0" prefWidth="92.0" />
+                              <Label fx:id="lblP1Name" accessibleRole="TEXT_FIELD" prefHeight="33.0" prefWidth="92.0" />
                            </children>
                            <opaqueInsets>
                               <Insets top="5.0" />
@@ -61,7 +61,7 @@
                            </rowConstraints>
                            <children>
                               <TextField fx:id="txtP3Name" prefHeight="11.0" prefWidth="94.0" style="-fx-background-color: lightgreen;" GridPane.rowIndex="1" />
-                              <HBox fx:id="hBoxP2Cards" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <HBox fx:id="hBoxP3Cards" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <ToggleButton fx:id="btnP3SitLeave" mnemonicParsing="false" onAction="#handleP3SitLeave" styleClass="togglebutton" text="Sit" />
                               <Label fx:id="lblP3Name" GridPane.rowIndex="1" />
                            </children>
@@ -132,7 +132,7 @@
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: green;">
                                  <children>
-                                    <HBox layoutX="14.0" layoutY="10.0" prefHeight="68.0" prefWidth="317.0" style="-fx-background-color: green;" />
+                                    <HBox fx:id="HboxCommunityCards" layoutX="14.0" layoutY="10.0" prefHeight="68.0" prefWidth="317.0" style="-fx-background-color: green;" />
                                  </children></AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: green;">
                                  <children>

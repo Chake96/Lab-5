@@ -4,6 +4,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import enums.eGame;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -32,7 +33,6 @@ public class RootLayoutController implements Initializable {
     private Menu mnuGame;
     
     
-	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
 	 
@@ -72,7 +72,19 @@ public class RootLayoutController implements Initializable {
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
     }
-
+    
+    public void handleFiveCardDraw(){
+    	mainApp.setiGameType(1);
+    }
+    
+    public void handleTexasHoldem(){
+    	mainApp.setiGameType(4);
+    }
+    
+    public void handleOmaha(){
+    	mainApp.setiGameType(5);
+    }
+    
     /**
      * Creates an empty address book.
      */
@@ -102,6 +114,7 @@ public class RootLayoutController implements Initializable {
     private void handleSaveAs() {
     }
 
+        
     /**
      * Opens an about dialog.
      */
@@ -110,7 +123,7 @@ public class RootLayoutController implements Initializable {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("AddressApp");
         alert.setHeaderText("About");
-        alert.setContentText("Author: Bert Gibbons");
+        alert.setContentText("Author: Carson Hake");
 
         alert.showAndWait();
     }
