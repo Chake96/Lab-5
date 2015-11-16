@@ -187,7 +187,7 @@ public class PokerTableController {
 	@FXML
 	private void handlePlay() {
 
-
+		iCardDrawn = 0;
 		// Clear all players hands
 		hBoxP1Cards.getChildren().clear();
 		hBoxP2Cards.getChildren().clear();
@@ -199,6 +199,7 @@ public class PokerTableController {
 		// Get the Rule, start the Game
 		Rule rle = null;
 		// Get the Rule, start the Game
+		
 		if (mainApp.getiGameType()==5){
 			rle = new Rule(eGame.Omaha);
 			globalRule = eGame.Omaha.getGame();
@@ -320,6 +321,8 @@ public class PokerTableController {
 
 				//	This is hard coded for five card stud... what to do AFTER the fifth card is dealt...  this should probably change to
 				//  a switch statement (switching on game played, card #, etc).
+				
+			
 				switch(iCardDrawn){
 				case 2:
 					switch(globalRule){
@@ -334,7 +337,7 @@ public class PokerTableController {
 					case 5:
 						GPPH.getHand().EvalHand();
 						System.out.println(GPPH.getHand().getHandStrength());
-						//btnDraw.setVisible(false);
+						btnDraw.setVisible(false);
 						break;}
 					break;
 				case 5:
@@ -342,11 +345,14 @@ public class PokerTableController {
 					case 1:
 						GPPH.getHand().EvalHand();
 						System.out.println(GPPH.getHand().getHandStrength());
-						//btnDraw.setVisible(false);
+						btnDraw.setVisible(false);
 						break;}
 					break;						
 				}
+				
+			
 			}
+			
 		}
 
 
